@@ -41,11 +41,40 @@ Expected OUTPUT for this sample
   ]
 
 */
+const array = [
+  {
+    food: 'Bacon',
+    isVegetarian: false
+  },
+  {
+    food: 'Sausage',
+    isVegetarian: false
+  },
+  {
+    food: 'Tofu',
+    isVegetarian: true
+  },
+  {
+    food: 'Chick Pea',
+    isVegetarian: true
+  }
+]
 
-function getFoodCategories(foods) {
-}
+//function getFoodCategories(foods) {
+//   if (isVegetarian = true) {
+//     return foods.map((food)=> `${food.food} + is suitable for vegetarians` )}
+//      else {
+//       return `${food.food} + is not suitable for vegetarians'}
+//  }
+  
+  function getFoodCategories(foods) {
+      return foods.map((food)=> `${food.food} ? + is suitable for vegetarians :
+      ${food.food} + is not suitable for vegetarians`
+      )
+    }
+   
 
-
+console.log(getFoodCategories(array))
 
 // DON'T TOUCH THIS!
 module.exports = getFoodCategories;
